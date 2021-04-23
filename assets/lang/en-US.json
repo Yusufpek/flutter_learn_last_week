@@ -1,0 +1,25 @@
+{
+    "welcome": "Welcome !",
+    "username": "Yusufpek",
+    "categories": [
+        "All",
+        "Chair",
+        "Sofa"
+    ],
+    "tabbar": {
+        "home": "home",
+        "basket": "basket",
+        "favourite": "favourite",
+        "profile": "profile"
+    },
+    "appBar": {
+        "basket": "Basket",
+        "settings": "Settings",
+        "favorite": "Favorite"
+    },
+    "settings": {
+        "theme": "Change the Theme",
+        "lang": "Change the language"
+    },
+    "button_text": "Buy"
+}
