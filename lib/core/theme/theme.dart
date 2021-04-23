@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
 
-import '../../product/theme_manager.dart';
 import 'ITheme.dart';
 
 class AppTheme extends ITheme {
-  final ThemeData _lightTheme = ThemeManager().currentTheme;
+  AppTheme(this._lightTheme);
+  ThemeData _lightTheme;
   @override
   ThemeData get theme => ThemeData(
+        scaffoldBackgroundColor: colors.gallery,
         appBarTheme: _lightTheme.appBarTheme.copyWith(
+            elevation: 0,
+            centerTitle: false,
             backgroundColor: colors.gallery,
-            textTheme: _lightTheme.textTheme.apply(bodyColor: Colors.black)),
-        textTheme: _lightTheme.textTheme.apply(bodyColor: Colors.black),
+            textTheme: _lightTheme.textTheme.apply(
+              bodyColor: Colors.black,
+            )),
+        textTheme: _lightTheme.textTheme.apply(
+          bodyColor: Colors.white,
+        ),
         colorScheme: _lightTheme.colorScheme.copyWith(
           primary: Colors.white,
           onPrimary: colors.chambray,
           secondary: Colors.amber,
+          onSecondary: Colors.grey,
         ),
         tabBarTheme: _lightTheme.tabBarTheme.copyWith(
           labelColor: Colors.white,
@@ -23,6 +31,11 @@ class AppTheme extends ITheme {
         bottomAppBarColor: colors.chambray,
         bottomAppBarTheme: _lightTheme.bottomAppBarTheme.copyWith(
           shape: CircularNotchedRectangle(),
+        ),
+        inputDecorationTheme: _lightTheme.inputDecorationTheme.copyWith(
+          border: OutlineInputBorder(),
+          focusColor: Colors.black,
+          hoverColor: Colors.black,
         ),
       );
 }

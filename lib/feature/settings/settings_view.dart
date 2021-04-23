@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn_last_week/product/theme_manager.dart';
+import 'package:provider/provider.dart';
 
 import '../../core/extensions/context_extension.dart';
 import '../../core/extensions/string_extension.dart';
@@ -9,13 +11,14 @@ class SettingsView extends StatelessWidget {
   final _viewModel = SettingsModelView();
   @override
   Widget build(BuildContext context) {
+    _viewModel.init(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(LocaleKeys.appBar_settings.locale(context)),
       ),
       body: Center(
         child: Container(
-          height: MediaQuery.of(context).size.height * 0.2,
+          height: MediaQuery.of(context).size.height * 0.3,
           margin: EdgeInsets.all(8),
           decoration: BoxDecoration(
             color: context.colorScheme.onPrimary,
@@ -25,15 +28,16 @@ class SettingsView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ListTile(
-                title: Text(LocaleKeys.settings_theme),
-                trailing: Icon(Icons.track_changes),
-                onTap: _viewModel.changeTheme,
+                title: Text(LocaleKeys.settings_theme.locale(context)),
+                subtitle: Text("Current theme: ${context.watch<ThemeManager>().currentTheme}"),
+                trailing: Icon(Icons.track_changes_outlined),
+                onTap: () => _viewModel.changeTheme(),
               ),
-              Divider(),
+              Divider(color: context.colorScheme.primary),
               ListTile(
-                title: Text(LocaleKeys.settings_lang),
+                title: Text(LocaleKeys.settings_lang.locale(context)),
                 trailing: Icon(Icons.text_rotation_angleup_sharp),
-                onTap: () => _viewModel.changeLanguage,
+                onTap: () => _viewModel.changeLanguage(),
               ),
             ],
           ),

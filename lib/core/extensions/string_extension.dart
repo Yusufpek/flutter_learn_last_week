@@ -8,10 +8,10 @@ import '../components/enums/language_enum.dart';
 extension StringLocalization on String {
   String locale(BuildContext context) {
     if (context.watch<CurrentLanguageManager>().currentLanguage == LanguageEnum.TR) {
-      print("tr oldu");
       return this.tr();
+      //TODO: Türkçe için gerekli ayarlar yapılacak !
     } else {
-      return this;
+      return this.tr();
     }
   }
 }
