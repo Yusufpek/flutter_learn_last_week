@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_last_week/product/theme_manager.dart';
 import 'package:provider/provider.dart';
 
 import '../../core/extensions/context_extension.dart';
 import '../../core/extensions/string_extension.dart';
 import '../../core/lang/locale_keys.g.dart';
+import '../../product/theme_manager.dart';
 import 'setting_model_view.dart';
 
 class SettingsView extends StatelessWidget {

@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_last_week/product/theme_manager.dart';
 import 'package:provider/provider.dart';
 
 import 'core/components/notifier/provider_list.dart';
@@ -8,6 +7,7 @@ import 'core/constants/application_constants.dart';
 import 'core/lang/language_manager.dart';
 import 'core/theme/theme.dart';
 import 'product/language_manager.dart';
+import 'product/theme_manager.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

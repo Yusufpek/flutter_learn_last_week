@@ -1,4 +1,4 @@
-import 'package:flutter_learn_last_week/core/constants/image_url_constants.dart';
+import '../../../core/constants/image_url_constants.dart';
 import 'package:mobx/mobx.dart';
 
 import '../model/furniture_model.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_last_week/core/components/widgets/furniture_card.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
 import '../../../core/components/lists/categories_list.dart';
+import '../../../core/components/widgets/furniture_card.dart';
 import '../../../core/constants/image_url_constants.dart';
 import '../../../core/extensions/context_extension.dart';
 import '../../../core/extensions/string_extension.dart';

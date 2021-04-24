@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_learn_last_week/product/language_manager.dart';
-import 'package:flutter_learn_last_week/product/theme_manager.dart';
 import 'package:mobx/mobx.dart';
 import 'package:provider/provider.dart';
+
+import '../../product/language_manager.dart';
+import '../../product/theme_manager.dart';
 
 part 'setting_model_view.g.dart';
 

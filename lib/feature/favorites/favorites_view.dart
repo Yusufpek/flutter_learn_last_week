@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_last_week/core/lang/locale_keys.g.dart';
 import 'package:provider/provider.dart';
 
 import '../../core/components/widgets/furniture_card.dart';
 import '../../core/extensions/string_extension.dart';
+import '../../core/lang/locale_keys.g.dart';
 import '../../product/favorite_manager.dart';
 
 class FavoritesView extends StatelessWidget {
