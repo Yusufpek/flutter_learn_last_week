@@ -15,7 +15,7 @@ void main() async {
 
   runApp(
     MultiProvider(
-      providers: [...AppProvider.instance.dependItems, ...AppProvider.instance.uiChangesItems],
+      providers: AppProvider.instance.providerItems,
       child: EasyLocalization(
         supportedLocales: LanguageManager.instance.locales,
         path: ApplicationConstants.LANG_ASSET_PATH,

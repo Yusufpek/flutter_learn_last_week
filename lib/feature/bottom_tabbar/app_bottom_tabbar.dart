@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../favorites/favorites_view.dart';
 import '../furniture/view/furniture_view.dart';
 import '../settings/settings_view.dart';
 import 'tab_model.dart';
@@ -11,7 +12,7 @@ class AppBottomTabbar extends StatelessWidget {
       icon: Icons.shopping_basket,
       child: Scaffold(body: Text('basket page')),
     ),
-    TabModel(icon: Icons.favorite, child: FurnitureView()),
+    TabModel(icon: Icons.favorite, child: FavoritesView()),
     TabModel(icon: Icons.person, child: SettingsView()),
   ];
 

@@ -23,6 +23,7 @@ class AppTheme extends ITheme {
           onPrimary: colors.chambray,
           secondary: Colors.amber,
           onSecondary: Colors.grey,
+          onError: Colors.red,
         ),
         tabBarTheme: _lightTheme.tabBarTheme.copyWith(
           labelColor: Colors.white,

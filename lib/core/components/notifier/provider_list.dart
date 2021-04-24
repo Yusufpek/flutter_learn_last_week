@@ -1,6 +1,6 @@
 import 'package:provider/provider.dart';
-import 'package:provider/single_child_widget.dart';
 
+import '../../../product/favorite_manager.dart';
 import '../../../product/language_manager.dart';
 import '../../../product/theme_manager.dart';
 
@@ -15,14 +15,15 @@ class AppProvider {
 
   AppProvider._init();
 
-  List<SingleChildWidget> dependItems = [
+  List<ChangeNotifierProvider> providerItems = [
     ChangeNotifierProvider<ThemeManager>(
       create: (context) => ThemeManager(),
     ),
-  ];
-  List<SingleChildWidget> uiChangesItems = [
     ChangeNotifierProvider<CurrentLanguageManager>(
       create: (context) => CurrentLanguageManager(),
+    ),
+    ChangeNotifierProvider<FavoriteManager>(
+      create: (context) => FavoriteManager(),
     ),
   ];
 }
