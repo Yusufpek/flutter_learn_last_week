@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_last_week/feature/bottom_tabbar/app_bottom_tabbar.dart';
+import '../feature/bottom_tabbar/app_bottom_tabbar.dart';
 
 import '../core/components/enums/language_enum.dart';
 

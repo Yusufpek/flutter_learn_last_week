@@ -21,5 +21,6 @@
         "theme": "Change the Theme",
         "lang": "Change the language"
     },
-    "button_text": "Buy"
+    "button_text": "Buy",
+    "search_bar": "Search"
 }

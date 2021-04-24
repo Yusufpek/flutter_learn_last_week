@@ -7,6 +7,7 @@ import 'core/constants/application_constants.dart';
 import 'core/lang/language_manager.dart';
 import 'core/theme/theme.dart';
 import 'product/language_manager.dart';
+import 'product/theme_manager.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,7 +15,7 @@ void main() async {
 
   runApp(
     MultiProvider(
-      providers: [...AppProvider.instance.dependItems, ...AppProvider.instance.uiChangesItems],
+      providers: AppProvider.instance.providerItems,
       child: EasyLocalization(
         supportedLocales: LanguageManager.instance.locales,
         path: ApplicationConstants.LANG_ASSET_PATH,
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Furniture App',
-      theme: AppTheme().theme,
+      theme: AppTheme(Provider.of<ThemeManager>(context, listen: true).currentTheme).theme,
       home: Provider.of<CurrentLanguageManager>(context, listen: false).view,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
